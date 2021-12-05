@@ -1,10 +1,11 @@
 const express = require('express')
+const hbs = require('hbs')
 const app = express()
 const port = 8080
 
-//  Engine hbs
-// TODO require('hbs')
+//  Handlebars
 app.set('view engine', 'hbs')
+hbs.registerPartials(__dirname + '/views/partials')
 
 // Static content
 app.use(express.static('public'))
