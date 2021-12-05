@@ -18,7 +18,11 @@ app.get('/', (req, res) => {
 })
 
 app.get('/generic', (req, res) => {
-    res.sendFile(__dirname + '/public/generic.html')
+    res.render('generic', {
+        name: 'Yankiel Pacheco',
+        title: 'Node.js course'
+    })
+    // res.sendFile(__dirname + '/public/generic.html')
 })
 app.get('/elements', (req, res) => {
     res.sendFile(__dirname + '/public/elements.html')
